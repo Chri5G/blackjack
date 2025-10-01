@@ -4,8 +4,8 @@ source "https://rubygems.org"
 gem "rails", "~> 8.0.3"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", ">= 2.1"
+# Use pg as the database for Active Record
+gem "pg"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
@@ -59,3 +59,6 @@ end
 gem "jsbundling-rails", "~> 1.3"
 
 gem "tailwindcss-rails", "~> 4.3"
+
+
+

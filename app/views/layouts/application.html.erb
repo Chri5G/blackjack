@@ -19,11 +19,11 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    <script type="module" src="<%= asset_path('application.js') %>"></script>
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <main class="container mx-auto mt-28">
       <%= yield %>
     </main>
   </body>

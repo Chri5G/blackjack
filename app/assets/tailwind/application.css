@@ -1,1 +1,17 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+/* Default background for the whole app */
+body {
+  background-image: url('backdrop.jpg');
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  font-family: 'Orbitron', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: 'center';
+}

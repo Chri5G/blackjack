@@ -1,10 +1,10 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
-import Hello from "./components/Hello"
+import Home from "./components/Home"
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("react-root")
   if (root) {
-    ReactDOM.createRoot(root).render(<Hello />)
+    ReactDOM.createRoot(root).render(<Home />)
   }
 })

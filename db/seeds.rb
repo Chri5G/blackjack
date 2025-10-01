@@ -7,3 +7,20 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+ranks = %w[ace 2 3 4 5 6 7 8 9 10 jack queen king]
+suits = %w[hearts diamonds clubs spades]
+
+Card.destroy_all
+
+suits.each do |suit|
+  ranks.each do |rank|
+    Card.create!(
+      rank: rank,
+      suit: suit,
+      image_url: "/cards/#{rank}_of_#{suit}.jpg"
+    )
+  end
+end
+
+puts "Seeded #{Card.count} cards."
