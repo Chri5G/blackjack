@@ -13,12 +13,14 @@ suits = %w[hearts diamonds clubs spades]
 
 Card.destroy_all
 
+ActiveRecord::Base.connection.reset_pk_sequence!('cards')
+
 suits.each do |suit|
   ranks.each do |rank|
     Card.create!(
       rank: rank,
       suit: suit,
-      image_url: "/cards/#{rank}_of_#{suit}.jpg"
+      image_url: "/cards/#{rank}_of_#{suit}.png"
     )
   end
 end

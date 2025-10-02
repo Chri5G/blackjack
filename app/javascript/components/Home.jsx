@@ -8,8 +8,6 @@ import Game from "./Game";
 import { yVariants } from "./Variants";
 
 export default function Home( { top_scores }) {
-    console.log(top_scores)
-
     const [page, setPage] = useState("home")
 
     return (
@@ -27,7 +25,7 @@ export default function Home( { top_scores }) {
                     </h1>
                     <div className="flex space-x-48 justify-center grid-cols-2 mt-10">
                         <motion.button 
-                            whileHover={{ scale: [1, 1.1, 1] }}
+                            whileHover={{ scale: [1, 1.05, 1] }}
                             transition={{
                                 duration: 0.7,
                                 repeat: Infinity,
@@ -38,7 +36,7 @@ export default function Home( { top_scores }) {
                                 <IoPlay className="text-red-500"/> Play
                         </motion.button>
                         <motion.button
-                            whileHover={{ scale: [1, 1.1, 1] }}
+                            whileHover={{ scale: [1, 1.05, 1] }}
                             transition={{
                                 duration: 0.7,
                                 repeat: Infinity,
@@ -61,8 +59,8 @@ export default function Home( { top_scores }) {
                     </ol>
                 </React.Fragment>
             )}
-            {page === "settings" && <Settings page={page} setPage={setPage}/>}
-            {page === "game" && <Game page={page} setPage={setPage}/>}
+            {page === "settings" && <Settings setPage={setPage}/>}
+            {page === "game" && <Game setPage={setPage}/>}
         </motion.div>
     );
 }
