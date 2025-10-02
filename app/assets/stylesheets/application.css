@@ -8,3 +8,8 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+.card-image{
+    width: 100px;   
+    height: 150px;
+}

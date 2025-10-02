@@ -23,3 +23,21 @@ export const staggerVariants = {
         }
     }
 }
+
+export const cardVariants = {
+    hidden: {
+        x: "50vw",    // start at bottom middle horizontally
+        y: "100vh",   // start below the screen
+        opacity: 0
+    },
+    visible: {
+        x: 0,         // final position is its grid cell
+        y: 0,
+        opacity: 1,
+        transition: {
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+        }
+    }
+}
