@@ -7,8 +7,8 @@ import Settings from "./Settings";
 import Game from "./Game";
 import { yVariants } from "./Variants";
 
-export default function Home( { top_scores }) {
-    const [page, setPage] = useState("home")
+export default function Home( { authToken, top_scores }) {
+    const [page, setPage] = useState("game")
 
     return (
         <motion.div
@@ -60,7 +60,7 @@ export default function Home( { top_scores }) {
                 </React.Fragment>
             )}
             {page === "settings" && <Settings setPage={setPage}/>}
-            {page === "game" && <Game setPage={setPage}/>}
+            {page === "game" && <Game setPage={setPage} authToken={authToken}/>}
         </motion.div>
     );
 }

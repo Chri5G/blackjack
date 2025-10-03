@@ -16,5 +16,6 @@ Rails.application.routes.draw do
         get :get_cards
       end
     end
+    resources :scores, defaults: { format: :json }, only: [:index, :create, :update]
   end
 end
